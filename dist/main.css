@@ -206,4 +206,123 @@ header .container nav ul li a:hover {
   .projects .container .cards {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+#contact {
+  width: 100%;
+  margin: 100px auto;
+  height: 500px;
+}
+#contact .container {
+  width: calc(100% - 20px);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  gap: 20px;
+}
+#contact .container #contact-info, #contact .container #contact-form {
+  height: 500px;
+  width: 50%;
+  border: 1px solid #282634;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+#contact .container #contact-info {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact .container #contact-info #title {
+  font-size: 1.5rem;
+  color: white;
+  background: #282634;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+}
+#contact .container #contact-info #info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 40px 20px;
+  padding: 60px 20px 20px;
+}
+#contact .container #contact-info #info div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+#contact .container #contact-info #info div img {
+  width: 40px;
+  height: auto;
+}
+#contact .container #contact-info #info div h3 {
+  color: #282634;
+  font-size: 1.1rem;
+  margin: 0;
+}
+#contact .container #contact-info #info div p, #contact .container #contact-info #info div a {
+  font-size: 0.9rem;
+  color: #282634;
+  text-decoration: none;
+}
+#contact .container #contact-info #info div a:hover {
+  text-decoration: underline;
+}
+#contact .container #contact-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact .container #contact-form h2 {
+  font-size: 1.5rem;
+  color: white;
+  background: #282634;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+}
+#contact .container #contact-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 60px 30px 20px;
+}
+#contact .container #contact-form form input, #contact .container #contact-form form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #55516f;
+  font-size: 1rem;
+  width: 80%;
+  background: #dddddd;
+}
+#contact .container #contact-form form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #282634;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+#contact .container #contact-form form button:hover {
+  background-color: #111017;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,128 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+$contact-height: 500px;
+$border-radius: 10px;
+$default-color: #282634;
+
+#contact {
+  width: 100%;
+  margin: 100px auto;
+  height: $contact-height;
+
+  .container {
+    width: calc(100% - 20px);
+    margin: auto;
+    @include display-flex-row;
+    padding: 20px 50px;
+    gap: 20px;
+
+    #contact-info, #contact-form {
+      height: $contact-height;
+      width: 50%;
+      border: 1px solid $default-color;
+      border-radius: $border-radius;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact-info {
+      background: white;
+      @include display-flex-column;
+
+      #title {
+        font-size: 1.5rem;
+        color: white;
+        background: $default-color;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+      }
+
+      #info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 40px 20px;
+        padding: 60px 20px 20px;
+
+        div {
+          @include display-flex-column;
+          align-items: center;
+          gap: 10px;
+          text-align: center;
+
+          img {
+            width: 40px;
+            height: auto;
+          }
+
+          h3 {
+            color: $default-color;
+            font-size: 1.1rem;
+            margin: 0;
+          }
+
+          p, a {
+            font-size: 0.9rem;
+            color: $default-color;
+            text-decoration: none;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    #contact-form {
+      background-color: white;
+      @include display-flex-column;
+
+      h2 {
+        font-size: 1.5rem;
+        color: white;
+        background: $default-color;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+      }
+
+      form {
+        @include display-flex-column;
+        gap: 15px;
+        padding: 60px 30px 20px;
+
+        input, textarea {
+          padding: 10px;
+          border-radius: $border-radius;
+          border: 1px solid lighten($default-color, 20%);
+          font-size: 1rem;
+        //   resize: none;
+           width: 80%;
+           background: #dddddd;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          background-color: $default-color;
+          color: white;
+          border-radius: $border-radius;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: darken($default-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}
