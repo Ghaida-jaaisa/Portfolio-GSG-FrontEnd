@@ -23,8 +23,9 @@ h6 {
 }
 
 footer {
-  margin-top: 100px;
+  z-index: 1;
   width: 100%;
+  position: relative;
 }
 footer .container {
   width: 100%;
@@ -220,7 +221,7 @@ header .container nav ul li a:hover {
   justify-content: center;
   align-items: center;
   padding: 20px 50px;
-  gap: 20px;
+  gap: 50px;
 }
 #contact .container #contact-info, #contact .container #contact-form {
   height: 500px;
@@ -251,8 +252,26 @@ header .container nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 40px 20px;
-  padding: 60px 20px 20px;
+  gap: 60px 20px;
+  padding: 20px 20px;
+}
+#contact .container #contact-info #info ::after {
+  content: "";
+  width: 2px;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  background: #bbb;
+}
+#contact .container #contact-info #info ::before {
+  content: "";
+  height: 2px;
+  width: 70%;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  background: #bbb;
 }
 #contact .container #contact-info #info div {
   display: flex;
@@ -310,6 +329,7 @@ header .container nav ul li a:hover {
   border-radius: 10px;
   border: 1px solid #55516f;
   font-size: 1rem;
+  resize: none;
   width: 80%;
   background: #dddddd;
 }
@@ -325,4 +345,23 @@ header .container nav ul li a:hover {
 }
 #contact .container #contact-form form button:hover {
   background-color: #111017;
+}
+
+/************-**********/
+@media screen and (max-width: 1030px) {
+  #contact {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  #contact .container #contact-info, #contact .container #contact-form {
+    width: 100%;
+    margin-bottom: 100px;
+  }
 }/*# sourceMappingURL=main.css.map */
