@@ -364,4 +364,46 @@ header .container nav ul li a:hover {
     width: 100%;
     margin-bottom: 100px;
   }
+}
+#goal .container {
+  background-color: #6a88ba;
+  width: calc(100% - 100px);
+  margin: 100px auto;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 20px;
+}
+#goal .container h2 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+#goal .container p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+#goal .container .goal-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#goal .container .goal-list .goal-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+#goal .container .goal-list .goal-item h3 {
+  color: #6a88ba;
+  margin-bottom: 10px;
+}
+#goal .container .goal-list .goal-item p {
+  color: #333;
 }/*# sourceMappingURL=main.css.map */
